@@ -1,0 +1,44 @@
+Greedy algorithm:
+    Is used in optimization problem to find minimum or maxiumum of a profit or result.
+    In greedy algo, we fins a minimum or maxminum solution for given problem.
+    1.Optimization:
+        Only one solution can be find in an optimization problem. The input order may be different,
+        but the final result will be same
+    2.Knapsack Problem explained(in this problem values acan be divisable):
+        1. we have a objects, it's profit and weight.
+        2. here the constraint or the condition is, the knapsack can be filled with <= 15 kgs
+        3. if you satisfy the condition then it is a feasible solution
+        4. if you maxmize profit of given condition then it becomes maximization problem (which
+            is  optimization problem)
+        5. if the solution is feasible and gets maximum profit then it is an optimal solution
+
+        Zero kanpsack problem you can't divide the values.
+    3.Job Sequencing with deadlines:
+        1. you have given jobs, profit and deadlines
+        2. here the condition is you have to finish the job in given unit of time deadline
+        3. and maxmize the profit with satisfy the condition
+        4. if you satisfy both then you fins maximum optimal solution to the problem
+    4. Optimal merge problem:
+        1. if you have given number of lists and you wanted to merge the lists together
+           achieving minimum time that is called Optimal merging.
+        2. Merging, each lists that involves int merging shoud be sorted
+        3. always merge small length of lists together and merge with rest of the lists
+        4. check the images attached for further ref.
+    5. Huffman's coding: is used to reduce the data size and compress it into a file
+        1. here we have a text : BCCABBDDAECCBBAEDDCC  - total 20 characters
+        2. if we send this text as ACSII coding then it will consume 20X8(8 bits for each ascii value) -160bits
+        3. we use Huffman's coding to reduce the size of the data.
+        4. please refer the pictures attached of the tables and details.
+    6. Minimum cost spanning tree:
+        Check the attached pdf for more details
+    7.Prim's and Kruskal's algorithm:
+        Check the attached jpg for more details
+    8. Dijkstra Algorithm:
+        Check the attached pdf for more details
+
+
+
+
+
+
+
