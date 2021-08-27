@@ -16,4 +16,4 @@ def pair_sum(array, k):
             output.add((min(num,target),max(num,target)))
     print('\n'.join(map(str,list(output))))
 
-pair_sum([1,3,2,2,5,7],8)
+pair_sum([1,3,2,2,5,9],8)
