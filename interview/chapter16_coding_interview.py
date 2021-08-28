@@ -1,3 +1,5 @@
+import functools
+
 
 def swap(a,b):
     a = a-b
@@ -98,7 +100,7 @@ def largestNum(a, b):
 # Driver Code
 a = 22
 b = 1231
-print(b*(bool)(b // a))
+#print(b*(bool)(b // a))
 
 #/*******************************************/#
 #  operations : multiply, divide and subtract using add operator only
@@ -123,7 +125,7 @@ def multiply(a,b):
             sum += (-b)
         return sum
 
-print(multiply(-20,-10))
+#print(multiply(-20,-10))
 
 # divide
 # Function to divide a by b and
@@ -142,23 +144,105 @@ def divide(dividend, divisor):
 
     # Initialize the quotient
     quotient = 0
+    remainder =0
     while (dividend >= divisor):
         dividend -= divisor
         quotient += 1
+        remainder=dividend
 
     #if the sign value computed earlier is -1 then negate the value of quotient
 
     if sign ==-1:
         quotient=-quotient
 
-    return quotient
+    return f"the quotient is: {quotient}, and the remainder is: {remainder}"
 
 
 # Driver code
 a = 10
 b = 3
-print(divide(a, b))
+#print(divide(a, b))
 a = 43
 b = -8
-print(divide(a, b))
+#print(divide(a, b))
+def adds(x,y):
 
+    while (y != 0):
+        # carry now contains common
+        # set bits of x and y
+        carry = x & y
+        # Sum of bits of x and y where at
+        # least one of the bits is not set
+        x = x ^ y
+
+        # Carry is shifted by one so that
+        # adding it to x gives the required sum
+        y = carry << 1
+    return x
+
+#print(adds(12,8))
+
+#/*******************************************/#
+# sorted merge
+def sorted_merge(a,b):
+    x =0
+    y =0
+    new_array =[]
+    while x<len(a) and y<len(b):
+        if(a[x] <b[y]):
+            new_array.append(a[x])
+            x+=1
+        else:
+            new_array.append(b[y])
+            y+=1
+    if(x < y):
+        new_array.append(a[x])
+    elif y< x:
+        new_array.append(b[y])
+
+    return new_array
+
+#print(sorted_merge([1,13,14,25,77,99],[5,7,9,24,27,98]))
+# sorted merge and adding elements to one of the array
+def sorted_merge1(a,b):
+    x =0
+    y =0
+    while x<len(a) and y<len(b):
+        if(a[x] <b[y]):
+            x+=1
+        else:
+            a.insert(x,b[y])
+            y+=1
+            x+=1
+    return a
+
+#print(sorted_merge1([1,13,14,25,77,99],[5,7,9,24,27,98]))
+
+#/*******************************************/#
+
+@functools.lru_cache(maxsize=None)
+def fib1(n):
+    if(n ==0 or n ==1):
+        return n
+    else:
+        return fib1(n-1)+fib1(n-2)
+
+### Memorization of recursive funtion
+fibcache = {}
+def fib(num):
+    if num in fibcache:
+        return fibcache[num]
+    else:
+        fibcache[num] = num if num < 2 else fib(num-1) + fib(num-2)
+        return fibcache[num]
+#print(fib(7))
+
+### Memorization of recursive funtion
+factorial_memo = {}
+def factorial(k):
+    if k < 2: return 1
+    if k not in factorial_memo:
+        factorial_memo[k] = k * factorial(k-1)
+    return factorial_memo[k]
+
+print(factorial(7))
