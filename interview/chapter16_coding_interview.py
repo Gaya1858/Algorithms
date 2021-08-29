@@ -245,4 +245,7 @@ def factorial(k):
         factorial_memo[k] = k * factorial(k-1)
     return factorial_memo[k]
 
-print(factorial(7))
+#print(factorial(7))
+#/*******************************************/#
+ # finding magic index
+print(2100%4)
