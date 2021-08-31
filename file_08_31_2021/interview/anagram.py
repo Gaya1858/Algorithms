@@ -30,5 +30,5 @@ def anagram1(s1,s2):
             return True
 
 
-x =anagram1("d o g", "God")
+x =anagram("d o g", "God")
 print(x)

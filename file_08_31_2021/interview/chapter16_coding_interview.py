@@ -125,7 +125,7 @@ def multiply(a,b):
             sum += (-b)
         return sum
 
-#print(multiply(-20,-10))
+print(multiply(-20,-10))
 
 # divide
 # Function to divide a by b and
